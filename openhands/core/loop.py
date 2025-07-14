@@ -18,6 +18,7 @@ async def run_agent_until_done(
     the agent until it reaches a terminal state.
     Note that runtime must be connected before being passed in here.
     """
+    state_change_event = asyncio.Event()
 
     def status_callback(msg_type: str, msg_id: str, msg: str) -> None:
         if msg_type == 'error':
@@ -27,6 +28,9 @@ async def run_agent_until_done(
                 asyncio.create_task(controller.set_agent_state_to(AgentState.ERROR))
         else:
             logger.info(msg)
+
+    def state_change_callback() -> None:
+        state_change_event.set()
 
     if hasattr(runtime, 'status_callback') and runtime.status_callback:
         raise ValueError(
@@ -41,5 +45,12 @@ async def run_agent_until_done(
     controller.status_callback = status_callback
     memory.status_callback = status_callback
 
+    if hasattr(controller, 'set_state_change_callback'):
+        controller.set_state_change_callback(state_change_callback)
+
     while controller.state.agent_state not in end_states:
-        await asyncio.sleep(1)
+        try:
+            await asyncio.wait_for(state_change_event.wait(), timeout=1.0)
+            state_change_event.clear()
+        except asyncio.TimeoutError:
+            pass
