@@ -24,6 +24,7 @@ class InMemoryFileStore(FileStore):
 
     def list(self, path: str) -> list[str]:
         files = []
+        dirs_seen = set()
         for file in self.files:
             if not file.startswith(path):
                 continue
@@ -37,7 +38,8 @@ class InMemoryFileStore(FileStore):
                 dir_path = os.path.join(path, parts[0])
                 if not dir_path.endswith('/'):
                     dir_path += '/'
-                if dir_path not in files:
+                if dir_path not in dirs_seen:
+                    dirs_seen.add(dir_path)
                     files.append(dir_path)
         return files
 
