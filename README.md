@@ -156,3 +156,5 @@ For a list of open source projects and licenses used in OpenHands, please see ou
   url={https://openreview.net/forum?id=OJd3ayDDoF}
 }
 ```
+
+<!-- Verification: Access and lint functionality confirmed by @nrdagar -->
