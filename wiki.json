@@ -1,0 +1,249 @@
+{
+  "repo_notes": [
+    {
+      "content": "i am editing wiki first time"
+    }
+  ],
+  "pages": [
+    {
+      "title": "Overview",
+      "purpose": "Introduce OpenHands, explaining what it is, its main capabilities, and high-level architecture overview",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Overview1",
+      "purpose": "overview1",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Quick Start",
+      "purpose": "Getting users up and running quickly with basic setup and first conversation",
+      "parent": "Overview",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Architecture",
+      "purpose": "Detailed explanation of the overall system architecture, components, and how they interact",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Core Components",
+      "purpose": "Overview of the main system components and how they work together",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Agent System",
+      "purpose": "Deep dive into the agent architecture, session management, and execution lifecycle",
+      "parent": "Core Components",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Runtime System",
+      "purpose": "Explanation of the pluggable runtime environments for secure code execution",
+      "parent": "Core Components",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "LLM Integration",
+      "purpose": "How the system integrates with various language models, configuration, and metrics",
+      "parent": "Core Components",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Event System",
+      "purpose": "The event-driven communication backbone that connects all components",
+      "parent": "Core Components",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Function Calling",
+      "purpose": "How agents interact with tools through function calling and tool integration",
+      "parent": "Core Components",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "User Interfaces",
+      "purpose": "Overview of the different ways users can interact with OpenHands",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Web Frontend",
+      "purpose": "The React-based web interface, real-time communication, and user experience",
+      "parent": "User Interfaces",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Command Line Interface",
+      "purpose": "Using OpenHands through CLI commands and headless mode",
+      "parent": "User Interfaces",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "API Reference",
+      "purpose": "REST API endpoints and WebSocket communication for developers",
+      "parent": "User Interfaces",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Configuration",
+      "purpose": "Comprehensive guide to configuring OpenHands for different use cases",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Development",
+      "purpose": "Guide for developers contributing to or extending OpenHands",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Building and Dependencies",
+      "purpose": "Setting up development environment, dependency management, and build process",
+      "parent": "Development",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Testing and CI/CD",
+      "purpose": "Automated testing, continuous integration, and deployment pipelines",
+      "parent": "Development",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Docker and Deployment",
+      "purpose": "Container images, deployment strategies, and infrastructure setup",
+      "parent": "Development",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Evaluation System",
+      "purpose": "How to run benchmarks and evaluate agent performance",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Integrations",
+      "purpose": "External service integrations and automation capabilities",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Git Provider Integration",
+      "purpose": "Integration with GitHub, GitLab, and other Git providers",
+      "parent": "Integrations",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "GitHub Actions Automation",
+      "purpose": "Automated issue resolution and PR creation through GitHub Actions",
+      "parent": "Integrations",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Reference",
+      "purpose": "Additional utilities, legacy components, and technical reference material",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Utilities and Helpers",
+      "purpose": "Utility functions, path resolution, and helper components",
+      "parent": "Reference",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    }
+  ]
+}
