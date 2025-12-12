@@ -90,7 +90,7 @@ async def wait_all(
         if len(errors) == 1:
             raise errors[0]
         raise AsyncException(errors)
-    return [task.result() for task in tasks]
+    return results
 
 
 class AsyncException(Exception):
