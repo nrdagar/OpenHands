@@ -156,3 +156,6 @@ For a list of open source projects and licenses used in OpenHands, please see ou
   url={https://openreview.net/forum?id=OJd3ayDDoF}
 }
 ```
+
+---
+*This is a test change to verify repository access and PR creation workflow.*
