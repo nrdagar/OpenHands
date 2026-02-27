@@ -171,6 +171,7 @@ class AgentController:
         # stuck helper
         self._stuck_detector = StuckDetector(self.state)
         self.status_callback = status_callback
+        self._state_change_callback: Callable | None = None
 
         # replay-related
         self._replay_manager = ReplayManager(replay_events)
@@ -600,6 +601,9 @@ class AgentController:
         # in case of crashes or unexpected circumstances
         self.save_state()
 
+        if self._state_change_callback:
+            self._state_change_callback()
+
     def get_agent_state(self) -> AgentState:
         """Returns the current state of the agent.
 
@@ -607,6 +611,14 @@ class AgentController:
             AgentState: The current state of the agent.
         """
         return self.state.agent_state
+
+    def set_state_change_callback(self, callback: Callable) -> None:
+        """Sets a callback to be called when the agent state changes.
+
+        Args:
+            callback: The callback function to call on state changes.
+        """
+        self._state_change_callback = callback
 
     async def start_delegate(self, action: AgentDelegateAction) -> None:
         """Start a delegate agent to handle a subtask.
