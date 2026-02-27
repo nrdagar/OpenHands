@@ -57,4 +57,4 @@ def get_pairs_from_events(events: list[Event]) -> list[tuple[Action, Observation
                 logger.debug(f'Observation {observation} has no cause')
             tuples.append((NullAction(), observation))
 
-    return tuples.copy()
+    return tuples
